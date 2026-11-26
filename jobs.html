@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accede a las principales bolsas de empleo gratuitas de Brasil: LinkedIn, Indeed, InfoJobs, SINE, Vagas.com y más.">
+  <meta name="theme-color" content="#102a43">
+  <meta property="og:title" content="Buscar empleo en Brasil CV Brasil Fácil">
+  <meta property="og:description" content="Encuentra vacantes gratuitas en los principales portales de empleo de Brasil.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23102a43'/%3E%3Cpath d='M18 17h22a8 8 0 0 1 8 8v22H26a8 8 0 0 0-8 8V17Z' fill='%232dd4bf'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Buscar empleo en Brasil CV Brasil Fácil</title>
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M8 5h11a7 7 0 0 1 7 7v15H15a7 7 0 0 0-7 7V5Z" fill="currentColor"/><path d="M13 12h8M13 17h6" stroke="#102a43" stroke-width="2" stroke-linecap="round"/></svg></span><span>CV Brasil <strong>Fácil</strong></span></a>
+      <nav class="main-nav" id="main-nav"><a href="./index.html#como-funciona">Cómo funciona</a><a href="./index.html#beneficios">Beneficios</a><a href="./jobs.html" class="active">Buscar empleo</a></nav>
+      <div class="nav-actions">
+        <div class="language-switch" role="group" aria-label="Seleccionar idioma"><button type="button" class="lang-btn active" data-lang="es" aria-pressed="true">ES</button><button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">PT</button></div>
+        <a class="btn btn-primary btn-small" href="./builder.html">Crear mi CV</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="kicker">Empleo en Brasil</span>
+        <h1>Tu próxima oportunidad puede estar a un clic.</h1>
+        <p>Accede a bolsas gratuitas y plataformas de contratación relevantes en todo Brasil. Prepara primero tu currículum y después postula con confianza.</p>
+        <form class="jobs-search" id="jobs-search">
+          <input type="search" id="job-search" placeholder="Ej. analista, vendedor,maid, TI..." aria-label="Buscar portal de empleo">
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="info-banner"><span aria-hidden="true">💡</span><div><strong>Consejo para candidatosšiños</strong><p>Usa el mismo formato de currículum en cada portal y adapta la carta a la vacante. Las empresas法语排除ere las habilidades relacionadas con el puesto.</p></div></div>
+        <div class="jobs-list" id="jobs-list">
+          <a class="job-card" data-name="linkedin vagas emprego" href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener noreferrer"><span class="portal-logo linkedin">in</span><div><strong>LinkedIn Jobs</strong><small>Vacantes, empresas y alertas de trabajo</small></div><b>↗</b></a>
+          <a class="job-card" data-name="indeed vagas emprego" href="https://br.indeed.com/" target="_blank" rel="noopener noreferrer"><span class="portal-logo indeed">i</span><div><strong>Indeed Brasil</strong><small>Millones de oportunidades por zona</small></div><b>↗</b></a>
+          <a class="job-card" data-name="infojobs pandape vagas" href="https://www.infojobs.com.br/" target="_blank" rel="noopener noreferrer"><span class="portal-logo infojobs">ij</span><div><strong>InfoJobs</strong><small>Vacantes por región y categoría</small></div><b>↗</b></a>
+          <a class="job-card" data-name="sine emprego vagas/governo" href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/empregador/sine" target="_blank" rel="noopener noreferrer"><span class="portal-logo sine">S</span><div><strong>SINE / Emprega Brasil</strong><small>Red pública de empleo y vacantes</small></div><b>↗</b></a>
+          <a class="job-card" data-name="vagas.com emprego" href="https://www.vagas.com.br/" target="_blank" rel="noopener noreferrer"><span class="portal-logo vagas">V</span><div><strong>Vagas.com</strong><small>Trabajo en todo el territorio brasileño</small></div><b>↗</b></a>
+          <a class="job-card" data-name="trabalha brasil vagas emprego" href="https://www.trabalhabrasil.com.br/" target="_blank" rel="noopener noreferrer"><span class="portal-logo trabalha">T</span><div><strong>Trabalha Brasil</strong><small>Oportunidades de empleo en Brasil</small></div><b>↗</b></a>
+          <a class="job-card" data-name="catho vagas emprego" href="https://www.catho.com.br/" target="_blank" rel="noopener noreferrer"><span class="portal-logo catho">C</span><div><strong>Catho</strong><small>Portal general de Recruitment y vacantes</small></div><b>↗</b></a>
+          <a class="job-card" data-name="glassdoor vagas emprego" href="https://www.glassdoor.com.br/Job/jobs.htm" target="_blank" rel="noopener noreferrer"><span class="portal-logo glassdoor">G</span><div><strong>Glassdoor</strong><small>Vacantes, salaries y opiniones</small></div><b>↗</b></a>
+          <a class="job-card" data-name="ciee estagio primeiro emprego" href="https://www.ciee.org.br/" target="_blank" rel="noopener noreferrer"><span class="portal-logo ciee">C</span><div><strong>CIEE</strong><small>Prácticas, estágio y primer empleo</small></div><b>↗</b></a>
+        </div>
+        <p id="no-results" hidden>No encontramos un portal con ese nombre. Intenta con “vagas”, “emprego” o el nombre del portal.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container cultural-grid">
+        <div class="culture-photo"><img src="https://amp.pr/i?q=worker+using+laptop+job+search&w=900&h=1000" alt="Persona buscando empleo desde una computadora" width="900" height="1000" loading="lazy"></div>
+        <div class="culture-copy">
+          <span class="kicker">Antes de postular</span>
+          <h2>Prepara una candidatura que se entienda</h2>
+          <div class="culture-item"><span class="culture-number">01</span><div><h3>Elige una versión de tu CV</h3><p>Mantén un documento base limpio y adapta el resumen y las habilidades a cada puesto.</p></div></div>
+          <div class="culture-item"><span class="culture-number">02</span><div><h3>Escribe una carta breve</h3><p>Indica por qué te interesa la vacante, qué sabes hacer y por qué te gustaría aportar al equipo.</p></div></div>
+          <div class="culture-item"><span class="culture-number">03</span><div><h3>Protege tus datos</h3><p>No envíes RG, CPF o documentos sensibles durante la primera阶段. La empresa puede solicitarlos después, según sus políticas.</p></div></div>
+          <a class="btn btn-primary" href="./builder.html">Crear mi currículum primero →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand"><a class="brand" href="./index.html"><span class="brand-mark"><svg viewBox="0 0 32 32" fill="none"><path d="M8 5h11a7 7 0 0 1 7 7v15H15a7 7 0 0 0-7 7V5Z" fill="currentColor"/><path d="M13 12h8M13 17h6" stroke="#102a43" stroke-width="2" stroke-linecap="round"/></svg></span><span>CV Brasil <strong>Fácil</strong></span></a><p>Tu herramienta sencilla para presentar tu experiencia al mercado de trabajo brasileño.</p></div>
+      <div class="footer-links"><div><strong>Producto</strong><a href="./builder.html">Crear mi CV</a><a href="./jobs.html">Buscar empleo</a></div><div><strong>Legal</strong><a href="./privacidade.html">Privacidad</a><a href="./termos.html">Términos</a></div><div><strong>Ayuda</strong><a href="./index.html#cultural">Guía cultural</a></div></div>
+    </div>
+    <div class="container footer-bottom"><p>© 2026 CV Brasil Fácil.</p><p><span class="status-dot"></span>Tus datos se procesan de forma privada</p></div>
+  </footer>
+
+  <script>
+    document.getElementById("jobs-search").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const term = document.getElementById("job-search").value.toLowerCase().trim();
+      let visible = 0;
+      document.querySelectorAll(".job-card").forEach(card => {
+        const match = !term || card.dataset.name.includes(term) || card.textContent.toLowerCase().includes(term);
+        card.hidden = !match;
+        if (match) visible++;
+      });
+      document.getElementById("no-results").hidden = visible > 0;
+    });
+  </script>
+</body>
+</html>

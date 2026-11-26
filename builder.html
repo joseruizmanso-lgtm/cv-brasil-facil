@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generador gratuito de currículum y carta de presentación en español y portugués de Brasil.">
+  <meta name="theme-color" content="#102a43">
+  <meta property="og:title" content="Crear currículum Representatives CV Brasil Fácil">
+  <meta property="og:description" content="Genera tu CV y carta de presentación adaptados a Brasil en minutos.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23102a43'/%3E%3Cpath d='M18 17h22a8 8 0 0 1 8 8v22H26a8 8 0 0 0-8 8V17Z' fill='%232dd4bf'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Crear currículum Representatives CV Brasil Fácil</title>
+  <script src="./script.js" defer></script>
+  <script src="./builder.js" defer></script>
+</head>
+<body class="builder-page">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M8 5h11a7 7 0 0 1 7 7v15H15a7 7 0 0 0-7 7V5Z" fill="currentColor"/><path d="M13 12h8M13 17h6" stroke="#102a43" stroke-width="2" stroke-linecap="round"/></svg></span><span>CV Brasil <strong>Fácil</strong></span></a>
+      <nav class="main-nav" id="main-nav"><a href="./index.html#como-funciona">Cómo funciona</a><a href="./index.html#beneficios">Beneficios</a><a href="./jobs.html">Buscar empleo</a></nav>
+      <div class="nav-actions">
+        <div class="language-switch" role="group" aria-label="Seleccionar idioma">
+          <button type="button" class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class-lang="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="builder-header">
+      <div class="container">
+        <span class="kicker">Creador de currículum</span>
+        <h1>Tu CV, listo para Brasil.</h1>
+        <p>Completa la información una vez. La vista previa se actualiza mientras escribes y puedes descargarla en PDF desde el navegador.</p>
+      </div>
+    </section>
+
+    <section class="container builder-layout">
+      <div class="form-panel">
+        <div class="progress-head"><strong id="step-title">Paso 1 de 4 · Información personal</strong><span id="progress-percent">25%</span></div>
+        <div class="progress-bar"><div id="progress-fill"></div></div>
+
+        <form id="cv-form">
+          <section class="form-step active" data-step="1">
+            <h2>Información personal</h2>
+            <p class="form-intro">Usa solamente los datos que deseas mostrar. No es necesario incluir RG, CPF o número de pasaporte.</p>
+            <div class="field-grid">
+              <div class="field"><label for="fullName">Nombre completo</label><input id="fullName" name="fullName" autocomplete="name" placeholder="Ej. Alex Morgan" required></div>
+              <div class="field"><label for="headline">Cargo objetivo</label><input id="headline" name="headline" placeholder="Ej. Analista de marketing" required><span class="field-hint">Usa el puesto al que deseas candidatarte.</span></div>
+              <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" placeholder="alex@email.com" required></div>
+              <div class="field"><label for="phone">Teléfono / WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+55 11 99999-9999"></div>
+              <div class="field"><label for="city">Ciudad y estado</label><input id="city" name="city" placeholder="São Paulo, SP"></div>
+              <div class="field"><label for="linkedin">LinkedIn (opcional)</label><input id="linkedin" name="linkedin" type="url" placeholder="linkedin.com/in/usuario"></div>
+              <div class="field full"><label for="summary">Resumen profesional</label><textarea id="summary" name="summary" placeholder="Ej. Analista con 4 años de experiencia en marketing digital, gestión de campaigns y análisis de métricas."></textarea><span class="field-hint">Describe tu perfil en 2–4 líneas. En la versión最终 Brazilian, este texto se redacta de forma profesional.</span></div>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="2">
+            <h2>Formación académica</h2>
+            <p class="form-intro">Incluye tu formación más reciente primero. Si no terminaste una carrera, puedes indicarlo con claridad.</p>
+            <div class="field-grid">
+              <div class="field"><label for="degree">Curso / carrera</label><input id="degree" name="degree" placeholder="Ej. Administración"></div>
+              <div class="field"><label for="institution">Institución</label><input id="institution" name="institution" placeholder="Nombre de la institución"></div>
+              <div class="field"><label for="educationPeriod">Período</label><input id="educationPeriod" name="educationPeriod" placeholder="2021 – 2024"></div>
+              <div class="field"><label for="educationDetail">Detalle opcional</label><input id="educationDetail" name="educationDetail" placeholder="Promoción, destaque académico"></div>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="3">
+            <h2>Experiencia profesional</h2>
+            <p class="form-intro">Prioriza la experiencia más reciente. Usa verbos como “desarrollé”, “coordené” o “aumenté”.</p>
+            <div class="field-grid">
+              <div class="field"><label for="jobTitle">Puesto</label><input id="jobTitle" name="jobTitle" placeholder="Ej. Analista de ventas"></div>
+              <div class="field"><label for="company">Empresa</label><input id="company" name="company" placeholder="Nombre de la empresa"></div>
+              <div class="field"><label for="jobPeriod">Período</label><input id="jobPeriod" name="jobPeriod" placeholder="2023 – Actual"></div>
+              <div class="field"><label for="jobLocation">Ciudad</label><input id="jobLocation" name="jobLocation" placeholder="Ciudad, estado"></div>
+              <div class="field full"><label for="jobDescription">Responsabilidades y resultados</label><textarea id="jobDescription" name="jobDescription" placeholder="Ej. Atendí a 30 clientes diarios y aumenté las ventas un 18% en seis meses."></textarea></div>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="4">
+            <h2>Idiomas, habilidades y carta</h2>
+            <p class="form-intro">La carta es opcional. Es breve, directa y explains por qué eres una buena opción para la vacante.</p>
+            <div class="field-grid">
+              <div class="field"><label for="spanishLevel">Español</label><select id="spanishLevel" name="spanishLevel"><option value="Nativo">Nativo</option><option value="Avanzado">Avanzado</option><option value="Intermedio">Intermedio</option><option value="Básico">Básico</option></select></div>
+              <div class="field"><label for="portugueseLevel">Portugués</label><select id="portugueseLevel" name="portugueseLevel"><option value="Básico">Básico</option><option value="Intermedio">Intermedio</option><option value="Avanzado">Avanzado</option><option value="Nativo">Nativo</option></select></div>
+              <div class="field full"><label for="skills">Habilidades principales</label><input id="skills" name="skills" placeholder="Excel, comunicación, gestión de clientes, inglés"></div>
+              <div class="field full"><label for="jobTitleInterest">Vacante de interés (opcional)</label><input id="jobTitleInterest" name="jobTitleInterest" placeholder="Ej. Analista administrativo"></div>
+              <div class="field full"><label for="letter">Carta de presentación</label><textarea id="letter" name="letter" placeholder="Escribe o deja vacío para generar una carta breve a partir de tus datos."></textarea></div>
+            </div>
+          </section>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-secondary" id="prev-step" disabled>← Anterior</button>
+            <button type="button" class="btn btn-primary" id="next-step">Continuar →</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="preview-panel" aria-label="Vista previa del documento">
+        <div class="preview-head">
+          <strong>Vista previa</strong>
+          <div class="preview-tabs" role="group" aria-label="Documento visible">
+            <button class="preview-tab active" type="button" data-document="cv">Currículum</button>
+            <button class="preview-tab" type="button" data-document="letter">Carta</button>
+          </div>
+        </div>
+        <div class="document-wrap">
+          <article class="document watermarked" id="document">
+            <div class="doc-header">
+              <h3 id="preview-name">Tu nombre</h3>
+              <p id="preview-headline">Cargo objetivo</p>
+              <div class="doc-contact">
+                <span id="preview-email">email@exemplo.com</span>
+                <span id="preview-phone">+55 00 00000-0000</span>
+                <span id="preview-city">Ciudad, estado</span>
+              </div>
+            </div>
+            <div id="cv-content">
+              <section class="doc-section">
+                <h4 id="summary-title">Resumo profissional</h4>
+                <p id="preview-summary" class="doc-empty">Su resumen profesional aparecerá aquí.</p>
+              </section>
+              <section class="doc-section">
+                <h4 id="experience-title">Experiência profissional</h4>
+                <div class="doc-item"><strong id="preview-job-title">Cargo</strong><span id="preview-company">Empresa</span><p id="preview-job-description">Descripción de responsabilidades y resultados.</p></div>
+              </section>
+              <section class="doc-section">
+                <h4 id="education-title">Formação acadêmica</h4>
+                <div class="doc-item"><strong id="preview-degree">Curso</strong><span id="preview-institution">Institución</span></div>
+              </section>
+              <section class="doc-section">
+                <h4>Idiomas e habilidades</h4>
+                <div class="doc-item"><span id="preview-languages">Español · Portugués</span><p id="preview-skills">Habilidades</p></div>
+              </section>
+            </div>
+            <div class="doc-letter" id="letter-content" hidden>
+              <p id="letter-date">São Paulo, 26 de novembro de 2026</p>
+              <p id="letter-greeting">PrezadosVERNISS Bass:</p>
+              <p id="letter-body">Escreva aquí su carta de presentación breve y objetiva.</p>
+              <p id="letter-signature">Atenciosamente,<br><strong id="letter-signature-name">Seu nome</strong></p>
+            </div>
+          </article>
+        </div>
+        <div class="preview-actions">
+          <button type="button" class="btn btn-secondary" id="download-watermark">PDF con marca de agua</button>
+          <button type="button" class="btn btn-primary" id="download-clean">Limpio / editable</button>
+          <a class="btn btn-accent full-span" href="./jobs.html">Buscar vacantes ahora →</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <dialog class="modal" id="checkout-modal">
+    <div class="modal-content">
+      <span class="kicker">Pagamento único</span>
+      <h2>Versión limpia y editable</h2>
+      <p>Una vez confirmado el pago PIX, podrás descargar el documento sin marca de agua y en formato editable.</p>
+      <div class="pix-box">
+        <div class="pix-symbol" aria-hidden="true">▦</div>
+        <strong>R$ 7,90</strong>
+        <small>Acceso de por vida a esta versión</small>
+      </div>
+      <div class="pix-note">El sitio está preparado para conectarse a un proveedor PIX. En esta versión estática no se procesan cobros ni se solicitan datos bancarios.</div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" type="button" id="close-modal">Cancelar</button>
+        <button class="btn btn-primary" type="button" id="continue-pix">Continuar con PIX</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom"><p>© 2026 CV Brasil Fácil.</p><p><a href="./privacidade.html">Privacidad y LGPD</a></p></div>
+  </footer>
+</body>
+</html>
