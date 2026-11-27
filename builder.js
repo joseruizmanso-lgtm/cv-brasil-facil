@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModalBtn = document.getElementById('close-modal');
   const continuePixBtn = document.getElementById('continue-pix');
 
-// Opciones de configuración del PDF (MEJORADAS PARA MÓVILES)
+// Opciones de configuración del PDF (MEJORADAS)
 const pdfOptions = {
   margin: 0.5,
   filename: 'CV_Brasil_Facil.pdf',
@@ -141,15 +141,17 @@ const pdfOptions = {
   html2canvas: { 
     scale: 2, 
     useCORS: true,
-    scrollY: 0, // Evita que el PDF salga vacío si bajaste en la página
-    windowWidth: 800 // Fuerza un ancho fijo para que no se rompa en el celular
+    scrollY: 0, 
+    windowWidth: 800 
   },
   jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
 };
 
 // Descargar con marca de agua
 downloadWatermarkBtn.addEventListener('click', () => {
-  // Un pequeño retraso para asegurar que todo esté cargado
+  // Aseguramos que la clase watermarked esté puesta
+  docElement.classList.add('watermarked');
+  
   setTimeout(() => {
     html2pdf().set(pdfOptions).from(docElement).save();
   }, 100);
@@ -167,10 +169,12 @@ closeModalBtn.addEventListener('click', () => {
 
 // Simular pago y descargar limpio
 continuePixBtn.addEventListener('click', () => {
+  // Quitamos la clase para que la marca de agua desaparezca temporalmente
   docElement.classList.remove('watermarked');
   
   setTimeout(() => {
     html2pdf().set(pdfOptions).from(docElement).save().then(() => {
+      // Volvemos a poner la clase después de generar el PDF
       docElement.classList.add('watermarked');
       checkoutModal.close();
     });
