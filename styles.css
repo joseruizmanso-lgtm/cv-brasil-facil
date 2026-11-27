@@ -264,8 +264,30 @@ blockquote { font-family: "Manrope", sans-serif; color: var(--navy); font-size: 
 .preview-tab.active { background: var(--teal-light); color: var(--teal-dark); }
 .document-wrap { padding: 20px; background: #edf2f5; max-height: 680px; overflow: auto; }
 .document { background: white; min-height: 760px; padding: 42px; color: #263b4f; box-shadow: 0 4px 15px rgba(16,42,67,.1); font-size: .74rem; }
-.document.watermarked { position: relative; overflow: hidden; }
-.document.watermarked::after { content: "CV BRASIL FÁCIL • VERSÃO GRÁTIS"; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(-34deg); color: rgba(16,42,67,.08); font-size: 1.15rem; font-weight: 800; white-space: nowrap; pointer-events: none; }
+/* Reemplaza tus dos reglas anteriores por estas: */
+.document.watermarked { 
+  position: relative; 
+  overflow: hidden; 
+}
+
+.watermark-overlay {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-34deg);
+  color: rgba(16, 42, 67, 0.08);
+  font-size: 1.15rem;
+  font-weight: 800;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Esta regla hace que la marca de agua aparezca SOLO cuando tiene la clase watermarked */
+.document.watermarked .watermark-overlay {
+  display: block;
+}
 .doc-header { border-bottom: 3px solid var(--teal); padding-bottom: 15px; margin-bottom: 18px; }
 .doc-header h3 { font-size: 1.5rem; margin-bottom: 3px; }
 .doc-header p { margin: 0; color: var(--teal-dark); font-weight: 700; }
