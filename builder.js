@@ -132,3 +132,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const checkoutModal = document.getElementById('checkout-modal');
   const closeModalBtn = document.getElementById('close-modal');
   const continuePixBtn = document.getElementById('continue-pix');
+
+// Opciones de configuración del PDF (MEJORADAS PARA MÓVILES)
+const pdfOptions = {
+  margin: 0.5,
+  filename: 'CV_Brasil_Facil.pdf',
+  image: { type: 'jpeg', quality: 0.98 },
+  html2canvas: { 
+    scale: 2, 
+    useCORS: true,
+    scrollY: 0, // Evita que el PDF salga vacío si bajaste en la página
+    windowWidth: 800 // Fuerza un ancho fijo para que no se rompa en el celular
+  },
+  jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+};
+
+// Descargar con marca de agua
+downloadWatermarkBtn.addEventListener('click', () => {
+  // Un pequeño retraso para asegurar que todo esté cargado
+  setTimeout(() => {
+    html2pdf().set(pdfOptions).from(docElement).save();
+  }, 100);
+});
+
+// Abrir modal para versión limpia
+downloadCleanBtn.addEventListener('click', () => {
+  checkoutModal.showModal();
+});
+
+// Cerrar modal
+closeModalBtn.addEventListener('click', () => {
+  checkoutModal.close();
+});
+
+// Simular pago y descargar limpio
+continuePixBtn.addEventListener('click', () => {
+  docElement.classList.remove('watermarked');
+  
+  setTimeout(() => {
+    html2pdf().set(pdfOptions).from(docElement).save().then(() => {
+      docElement.classList.add('watermarked');
+      checkoutModal.close();
+    });
+  }, 100);
+});
