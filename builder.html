@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Generador gratuito de currículum y carta de presentación en español y portugués de Brasil.">
   <meta name="theme-color" content="#102a43">
-  <meta property="og:title" content="Crear currículum Representatives CV Brasil Fácil">
+  <meta property="og:title" content="Crear currículum | CV Brasil Fácil">
   <meta property="og:description" content="Genera tu CV y carta de presentación adaptados a Brasil en minutos.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23102a43'/%3E%3Cpath d='M18 17h22a8 8 0 0 1 8 8v22H26a8 8 0 0 0-8 8V17Z' fill='%232dd4bf'/%3E%3C/svg%3E">
@@ -13,7 +13,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
-  <title>Crear currículum Representatives CV Brasil Fácil</title>
+  <title>Crear currículum | CV Brasil Fácil</title>
+  
+  <!-- Librería para generar PDFs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  
   <script src="./script.js" defer></script>
   <script src="./builder.js" defer></script>
 </head>
@@ -25,7 +29,7 @@
       <div class="nav-actions">
         <div class="language-switch" role="group" aria-label="Seleccionar idioma">
           <button type="button" class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
-          <button type="button" class-lang="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
+          <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
         </div>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
       </div>
@@ -44,9 +48,10 @@
     <section class="container builder-layout">
       <div class="form-panel">
         <div class="progress-head"><strong id="step-title">Paso 1 de 4 · Información personal</strong><span id="progress-percent">25%</span></div>
-        <div class="progress-bar"><div id="progress-fill"></div></div>
+        <div class="progress-bar"><div id="progress-fill" style="width: 25%;"></div></div>
 
         <form id="cv-form">
+          <!-- PASO 1 -->
           <section class="form-step active" data-step="1">
             <h2>Información personal</h2>
             <p class="form-intro">Usa solamente los datos que deseas mostrar. No es necesario incluir RG, CPF o número de pasaporte.</p>
@@ -57,10 +62,11 @@
               <div class="field"><label for="phone">Teléfono / WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+55 11 99999-9999"></div>
               <div class="field"><label for="city">Ciudad y estado</label><input id="city" name="city" placeholder="São Paulo, SP"></div>
               <div class="field"><label for="linkedin">LinkedIn (opcional)</label><input id="linkedin" name="linkedin" type="url" placeholder="linkedin.com/in/usuario"></div>
-              <div class="field full"><label for="summary">Resumen profesional</label><textarea id="summary" name="summary" placeholder="Ej. Analista con 4 años de experiencia en marketing digital, gestión de campaigns y análisis de métricas."></textarea><span class="field-hint">Describe tu perfil en 2–4 líneas. En la versión最终 Brazilian, este texto se redacta de forma profesional.</span></div>
+              <div class="field full"><label for="summary">Resumen profesional</label><textarea id="summary" name="summary" placeholder="Ej. Analista con 4 años de experiencia en marketing digital, gestión de campañas y análisis de métricas."></textarea><span class="field-hint">Describe tu perfil en 2–4 líneas. En la versión final, este texto se redacta de forma profesional.</span></div>
             </div>
           </section>
 
+          <!-- PASO 2 -->
           <section class="form-step" data-step="2">
             <h2>Formación académica</h2>
             <p class="form-intro">Incluye tu formación más reciente primero. Si no terminaste una carrera, puedes indicarlo con claridad.</p>
@@ -72,9 +78,10 @@
             </div>
           </section>
 
+          <!-- PASO 3 -->
           <section class="form-step" data-step="3">
             <h2>Experiencia profesional</h2>
-            <p class="form-intro">Prioriza la experiencia más reciente. Usa verbos como “desarrollé”, “coordené” o “aumenté”.</p>
+            <p class="form-intro">Prioriza la experiencia más reciente. Usa verbos como “desarrollé”, “coordiné” o “aumenté”.</p>
             <div class="field-grid">
               <div class="field"><label for="jobTitle">Puesto</label><input id="jobTitle" name="jobTitle" placeholder="Ej. Analista de ventas"></div>
               <div class="field"><label for="company">Empresa</label><input id="company" name="company" placeholder="Nombre de la empresa"></div>
@@ -84,9 +91,10 @@
             </div>
           </section>
 
+          <!-- PASO 4 -->
           <section class="form-step" data-step="4">
             <h2>Idiomas, habilidades y carta</h2>
-            <p class="form-intro">La carta es opcional. Es breve, directa y explains por qué eres una buena opción para la vacante.</p>
+            <p class="form-intro">La carta es opcional. Es breve, directa y explica por qué eres una buena opción para la vacante.</p>
             <div class="field-grid">
               <div class="field"><label for="spanishLevel">Español</label><select id="spanishLevel" name="spanishLevel"><option value="Nativo">Nativo</option><option value="Avanzado">Avanzado</option><option value="Intermedio">Intermedio</option><option value="Básico">Básico</option></select></div>
               <div class="field"><label for="portugueseLevel">Portugués</label><select id="portugueseLevel" name="portugueseLevel"><option value="Básico">Básico</option><option value="Intermedio">Intermedio</option><option value="Avanzado">Avanzado</option><option value="Nativo">Nativo</option></select></div>
@@ -112,6 +120,7 @@
           </div>
         </div>
         <div class="document-wrap">
+          <!-- Este es el contenedor que se va a convertir en PDF -->
           <article class="document watermarked" id="document">
             <div class="doc-header">
               <h3 id="preview-name">Tu nombre</h3>
@@ -124,27 +133,27 @@
             </div>
             <div id="cv-content">
               <section class="doc-section">
-                <h4 id="summary-title">Resumo profissional</h4>
+                <h4>Resumen profesional</h4>
                 <p id="preview-summary" class="doc-empty">Su resumen profesional aparecerá aquí.</p>
               </section>
               <section class="doc-section">
-                <h4 id="experience-title">Experiência profissional</h4>
+                <h4>Experiencia profesional</h4>
                 <div class="doc-item"><strong id="preview-job-title">Cargo</strong><span id="preview-company">Empresa</span><p id="preview-job-description">Descripción de responsabilidades y resultados.</p></div>
               </section>
               <section class="doc-section">
-                <h4 id="education-title">Formação acadêmica</h4>
+                <h4>Formación académica</h4>
                 <div class="doc-item"><strong id="preview-degree">Curso</strong><span id="preview-institution">Institución</span></div>
               </section>
               <section class="doc-section">
-                <h4>Idiomas e habilidades</h4>
+                <h4>Idiomas y habilidades</h4>
                 <div class="doc-item"><span id="preview-languages">Español · Portugués</span><p id="preview-skills">Habilidades</p></div>
               </section>
             </div>
             <div class="doc-letter" id="letter-content" hidden>
-              <p id="letter-date">São Paulo, 26 de novembro de 2026</p>
-              <p id="letter-greeting">PrezadosVERNISS Bass:</p>
-              <p id="letter-body">Escreva aquí su carta de presentación breve y objetiva.</p>
-              <p id="letter-signature">Atenciosamente,<br><strong id="letter-signature-name">Seu nome</strong></p>
+              <p id="letter-date">São Paulo, 26 de noviembre de 2026</p>
+              <p id="letter-greeting">Estimado(a) reclutador(a):</p>
+              <p id="letter-body">Escriba aquí su carta de presentación breve y objetiva.</p>
+              <p id="letter-signature">Atentamente,<br><strong id="letter-signature-name">Su nombre</strong></p>
             </div>
           </article>
         </div>
@@ -157,9 +166,10 @@
     </section>
   </main>
 
+  <!-- Modal de pago -->
   <dialog class="modal" id="checkout-modal">
     <div class="modal-content">
-      <span class="kicker">Pagamento único</span>
+      <span class="kicker">Pago único</span>
       <h2>Versión limpia y editable</h2>
       <p>Una vez confirmado el pago PIX, podrás descargar el documento sin marca de agua y en formato editable.</p>
       <div class="pix-box">
@@ -170,7 +180,7 @@
       <div class="pix-note">El sitio está preparado para conectarse a un proveedor PIX. En esta versión estática no se procesan cobros ni se solicitan datos bancarios.</div>
       <div class="modal-actions">
         <button class="btn btn-secondary" type="button" id="close-modal">Cancelar</button>
-        <button class="btn btn-primary" type="button" id="continue-pix">Continuar con PIX</button>
+        <button class="btn btn-primary" type="button" id="continue-pix">Simular Pago y Descargar</button>
       </div>
     </div>
   </dialog>
